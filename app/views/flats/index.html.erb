@@ -30,8 +30,16 @@
               <span class="text-primary">
                 <%= link_to 'More info', flat_path(flat) %>
               </span>
-              <a href="#" class="ms-3 text-warning">Edit</a>
-              <a href="#" class="ms-3 text-danger">Remove</a>
+              <span class="ms-3">
+                <%= link_to 'Edit', edit_flat_path(flat), class: "text-warning" %>
+              </span>
+              <span class="ms-3 text-danger">
+              <%= link_to "Remove",
+                flat_path(flat),
+                data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+                class: "text-danger"
+              %>
+              </span>
             </div>
         </div>
       </div>

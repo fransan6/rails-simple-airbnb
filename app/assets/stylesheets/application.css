@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+a {
+  text-decoration: none;
+}
 
 .flex {
   display: flex;
@@ -71,4 +74,10 @@
 
 .margin-top-negative {
   margin-top: -75px;
+}
+
+.flex-align {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
