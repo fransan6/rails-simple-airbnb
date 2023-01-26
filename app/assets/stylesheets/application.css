@@ -13,3 +13,62 @@
  *= require_tree .
  *= require_self
  */
+
+.flex {
+  display: flex;
+}
+
+.flat-card-image {
+  height: 180px;
+  background-position: center;
+  background-size: cover;
+}
+
+.flat-card {
+  width: 100%;
+  position: relative;
+  margin: 0.5rem 0 1rem 0;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%), 0 3px 1px -2px rgb(0 0 0 / 20%);
+}
+
+.flat-card-content {
+  padding: 24px;
+  background-color: rgb(255, 233, 236);
+}
+
+.flat-card-actions {
+  position: relative;
+  background-color: rgb(253, 244, 245);
+  /* background-color: inherit; */
+  border-top: 1px solid rgba(160,160,160,0.2);
+  padding: 16px 24px;
+}
+
+.flat-show-card {
+  background: #eff3f7;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 1px 1px 2px rgb(0 0 0 / 10%);
+  border-radius: 3px;
+}
+
+.map {
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+}
+
+.col-8 {
+  flex: 0 0 auto;
+  width: 66.66666667%;
+}
+
+.show-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.margin-top-negative {
+  margin-top: -75px;
+}

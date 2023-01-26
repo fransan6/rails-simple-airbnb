@@ -1,0 +1,40 @@
+<%= render "banner" %>
+
+<div class="container mt-3">
+  <div class="row">
+    <h1 class="mt-2 col-12">All our properties</h1>
+  </div>
+  <div class="row">
+    <p class="col-12">All <%= @flats.count %> properties</p>
+  </div>
+  <div class="row">
+    <% @flats.each do |flat| %>
+      <div class="col-md-4">
+        <div class="flat-card">
+          <div class="flat-card-image" style="background-image: url('https://images.unsplash.com/photo-1534212758080-135b3affa932?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80')"></div>
+            <div class="flat-card-content">
+            <h4><%= flat.name %></h4>
+            <p><%= flat.address %></p>
+            <div class="flex">
+              <div class="flex align-items-center">
+                <i class="fa-solid fa-people-line me-1"></i>
+                <span><%= flat.number_of_guests %></span>
+              </div>
+              <div class="flex align-items-center ms-3">
+                <i class="fa-solid fa-euro-sign me-1"></i>
+                <span><%= flat.price_per_night %></span>
+              </div>
+            </div>
+            </div>
+            <div class="flat-card-actions">
+              <span class="text-primary">
+                <%= link_to 'More info', flat_path(flat) %>
+              </span>
+              <a href="#" class="ms-3 text-warning">Edit</a>
+              <a href="#" class="ms-3 text-danger">Remove</a>
+            </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
